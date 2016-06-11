@@ -1,0 +1,15 @@
+name: DailyClaim
+main: org.bukkit.vrobbie.dailyclaim.DailyClaim
+version: 0.1
+
+commands:
+   claim:
+      description: This command allows you to claim your daily SkyBlock rewards!
+      usage: /<command>
+      permission: <plugin name>.claim
+      permission-message: You don't have permission to use that command! [<permission>]
+      
+permissions:
+   dailyclaim.claim:
+      description: Permission that allows a user to claim their daily rewards.
+      default: op

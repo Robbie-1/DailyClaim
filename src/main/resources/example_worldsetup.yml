@@ -1,0 +1,16 @@
+allowMultiWorldSetup: true
+allowClaimIndependence: false
+
+worlds:
+  myWorld:
+    claimDelay: default
+    blacklist: true
+    list:
+      - vRobbie
+      - gilbertwing
+   
+  myWorld_nether:
+    claimDelay: 60
+    blacklist: false
+    list:
+      - LethalDarkness4

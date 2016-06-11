@@ -1,0 +1,10 @@
+allowMultiWorldSetup: false
+allowClaimIndependence: false
+
+worlds:
+  myWorld:
+    claimDelay: default
+    blacklist: false
+    list:
+#     - user1
+#     - user2 (...)
