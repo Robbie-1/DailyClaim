@@ -1,4 +1,4 @@
-package org.bukkit.vrobbie.dailyclaim;
+package dev.vrobbie.dailyclaim;
 
 import java.io.File;
 import java.io.IOException;

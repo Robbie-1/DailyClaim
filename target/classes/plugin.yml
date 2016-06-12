@@ -1,5 +1,5 @@
 name: DailyClaim
-main: org.bukkit.vrobbie.dailyclaim.DailyClaim
+main: dev.vrobbie.dailyclaim.DailyClaim
 version: 0.1
 
 commands:

@@ -1,4 +1,4 @@
-package org.bukkit.vrobbie.dailyclaim;
+package dev.vrobbie.dailyclaim;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
