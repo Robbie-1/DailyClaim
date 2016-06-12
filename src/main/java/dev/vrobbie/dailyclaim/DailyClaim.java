@@ -3,7 +3,13 @@ package dev.vrobbie.dailyclaim;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Server.Spigot;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -20,12 +26,12 @@ public class DailyClaim extends JavaPlugin {
 	
     public void onEnable() {
     	init(); //generates default plugin files
-        this.getLogger().info("DailyClaim has been enabled.");
+        this.getLogger().info("DailyClaim has been enabled!");
         //check to see if program files are in directory => generate if not found.
     }
 
     public void onDisable() {
-        this.getLogger().info("DailyClaim has bn disabled.");
+        this.getLogger().info("DailyClaim has been disabled!");
     }
     
     public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
@@ -54,6 +60,17 @@ public class DailyClaim extends JavaPlugin {
     		config.set("allowClaimIndependence", false);
     		
     		//scan worlds... etc{}
+    		
+    		List<World> worlds = Bukkit.getServer().getWorlds();
+    		
+    		for (int i=0; i < worlds.size(); i++) {
+    			config.set("worlds."+worlds.get(i).getName()+".enabled", false);
+    			config.set("worlds."+worlds.get(i).getName()+".claimDelay", "default");
+    			config.set("worlds."+worlds.get(i).getName()+".blacklist", false);
+    			
+    			List<String> blank = Arrays.asList("user_name_here");
+    			config.set("worlds."+worlds.get(i).getName()+".list", blank);
+    		}
 
     		try {
     			config.save(file);
