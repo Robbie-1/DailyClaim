@@ -3,6 +3,7 @@ allowClaimIndependence: false
 
 worlds:
   myWorld:
+    enabled: false
     claimDelay: default
     blacklist: false
     list:

@@ -3,6 +3,7 @@ allowClaimIndependence: false
 
 worlds:
   myWorld:
+    enabled: true
     claimDelay: default
     blacklist: true
     list:
@@ -10,6 +11,7 @@ worlds:
       - gilbertwing
    
   myWorld_nether:
+    enabled: false
     claimDelay: 60
     blacklist: false
     list:
